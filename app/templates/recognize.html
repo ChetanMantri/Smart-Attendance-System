@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="recognize">
+    <h2>Face Recognition</h2>
+    <p>Click the button below to recognize faces.</p>
+    <form action="{{ url_for('recognition.recognize') }}" method="post">
+        <button type="submit" class="btn">Recognize Face</button>
+    </form>
+
+    <a href="{{ url_for('main.home') }}" class="btn">Back to Home</a>
+  </div>
+{% endblock %}
+

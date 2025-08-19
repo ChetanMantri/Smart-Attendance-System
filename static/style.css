@@ -1,0 +1,285 @@
+/* Base Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f4f7fc;
+    color: #333;
+    background-image: url("images/background_img.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+/* Header */
+header {
+    background: rgba(52, 53, 255, 0.6);
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2.5em;
+    margin: 0;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
+}
+
+header p {
+    font-size: 1.2em;
+    margin: 5px 0 0;
+}
+
+/* Navigation Bar */
+nav {
+    display: flex;
+    justify-content: center;
+    background: rgba(52, 53, 255, 0.4);
+    padding: 10px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 14px 20px;
+    margin: 0 10px;
+    border-radius: 5px;
+    font-size: 1.2em;
+    font-weight: 500;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+nav a:hover {
+    background-color: #0052cc;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Main Content Styling */
+.container {
+    /* max-width: 1200px; */
+    margin: 20px auto;
+    padding: 20px;
+    background-color: transparent;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    /* left: 0px; */
+}
+
+/* Footer */
+.footer {
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 20px;
+    font-size: 1rem;
+}
+
+.footer a {
+    color: white;
+    font-weight: 500;
+    font-size: 1.2rem;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.4);
+    color: white;
+    text-align: center;
+    border-radius: 10px;
+    padding: 50px;
+    margin-bottom: 20px;
+}
+
+.hero h2 {
+    font-size: 2.5em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    margin: 0;
+}
+
+.hero p {
+    font-size: 1.2em;
+    margin-top: 10px;
+}
+
+/* Button Styles */
+.btn {
+    background-color: #0066cc;
+    color: white;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    text-align: center;
+    border-radius: 5px;
+    cursor: pointer;
+    display: inline-block;
+    text-decoration: none;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    margin: 10px;
+}
+
+.btn:hover {
+    background-color: #0052cc;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+
+
+
+/* Card Styling */
+.container_register{
+    width: 100%;
+}
+
+
+.card {
+    background-color: rgba(0, 0, 0, 0.4);;
+    border: 1px solid #f1f1f1;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 20px 0;
+    text-align: left;
+    width: 60%;
+    max-width: 500px;
+     position: relative;
+    left: 0px; 
+}
+
+.card h3 {
+    margin-bottom: 15px;
+    font-size: 1.5em;
+    color: rgb(255, 255, 255);
+    text-align: center;
+}
+
+.card label {
+    font-weight: 600;
+    margin-top: 10px;
+    display: block;
+    color: rgb(255, 255, 255);
+}
+
+.card input,
+.card button {
+    width: 60%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-size: 1em;
+}
+
+.card button {
+    background-color: #0066cc;
+    color: white;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.card button:hover {
+    background-color: #0052cc;
+    transform: translateY(-2px);
+}
+
+.card input:focus {
+    border-color: #0052cc;
+    outline: none;
+}
+
+/* Flash messages */
+.flash-messages {
+    margin-top: 20px;
+}
+
+.flash-message {
+    width: 30%;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 5px;
+    font-size: 1.2em;
+}
+
+.flash-message.success {
+    background-color: #28a745;
+    color: white;
+}
+
+.flash-message.error {
+    background-color: #dc3545;
+    color: white;
+}
+
+.flash-message p {
+    margin: 0;
+    background-color: #28a745;
+}
+
+.flash{
+    color: rgb(0, 0, 0);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+table th, table td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+table th {
+    background-color: #f4f4f4;
+    font-weight: bold;
+}
+
+button.btn {
+    background-color: #0066cc;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button.btn:hover {
+    background-color: #0052cc;
+}
+
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero {
+        padding: 30px;
+    }
+
+    .hero h2 {
+        font-size: 2em;
+    }
+
+    .btn {
+        font-size: 1em;
+        padding: 10px 20px;
+    }
+}
+
+

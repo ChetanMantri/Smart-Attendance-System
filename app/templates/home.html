@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="hero">
+    <h2>Welcome to the Smart Attendance System</h2>
+    <p>Efficiently manage attendance with cutting-edge technology.</p>
+  </div>
+
+  <div class="container">
+    <div class="container_box">
+      <a href="{{ url_for('users.register') }}" class="btn">Register a Student</a>
+      <a href="{{ url_for('training.train') }}" class="btn">Train</a>
+      <a href="{{ url_for('recognition.recognize') }}" class="btn">Recognize Attendance</a>
+      <a href="{{ url_for('main.photos') }}" class="btn"> Photos </a>
+      <a href="{{ url_for('messaging.send_message_home') }}" class="btn">Send Message to Parents</a>
+    </div>
+  </div>
+{% endblock %}
+

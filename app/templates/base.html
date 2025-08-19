@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head >
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Attendance System | University</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+<body>
+<header>
+    <h1>Smart Attendance System</h1>
+    <p>M.S.Bidve Engineering College, Latur</p>
+    {% with messages = get_flashed_messages(with_categories=true) %}
+      {% if messages %}
+        <div class="flash-messages">
+          {% for category, message in messages %}
+            <div class="flash-message {{ category }}">{{ message }}</div>
+          {% endfor %}
+        </div>
+      {% endif %}
+    {% endwith %}
+</header>
+
+<nav>
+    <a href="{{ url_for('main.home') }}">Home</a>
+    <a href="{{ url_for('users.register') }}">Register</a>
+    <a href="{{ url_for('training.train') }}">Train</a>
+    <a href="{{ url_for('recognition.recognize') }}">Recognize</a>
+    <a href="{{ url_for('main.photos') }}">Photos</a>
+    <a href="{{ url_for('messaging.send_message_home') }}">Send Message</a>
+  </nav>
+
+{% block content %}
+{% endblock %}
+
+<div class="footer">
+    <p>&copy; Smart Attendance System. All Rights Reserved.</p>
+    <p>Developed by <a href="#">Chetan Mantri </a></p>
+  </div>
+</body>
+</html>
+

@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="train">
+    <h2>Train the Model</h2>
+    <p>Train the model using captured images to enable recognition.</p>
+
+    <form action="{{ url_for('training.train') }}" method="POST">
+        <button type="submit" class="btn">Train Model</button>
+    </form>
+
+    <a href="{{ url_for('main.home') }}" class="btn">Back to Home</a>
+  </div>
+{% endblock %}
+

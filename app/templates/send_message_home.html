@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container">
+    <h2>Send Weekly Attendance to Parents</h2>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Parent's Phone Number</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for user in users %}
+            <tr>
+                <td>{{ user.name }}</td>
+                <td>{{ user.parents_no }}</td>
+                <td>
+                    <form action="{{ url_for('messaging.send_message', user_id=user.user_id) }}" method="post">
+                        <button type="submit" class="btn">Send Message</button>
+                    </form>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+  </div>
+{% endblock %}
+
